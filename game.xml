@@ -1,0 +1,41 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<menus>
+    <menu name="mainroad">
+        <prompt>
+            You are on a road that heads west east of your position.
+            Which way will you go?
+        </prompt>
+        <choices>
+            <choice link="spider">Go West</choice>
+            <choice link="brickhouse">Go East</choice>
+            <choice link="dragon">Wait for something to happen</choice>
+        </choices>
+    </menu>
+
+    <menu name="spider">
+        <prompt>
+            You travel down the road, about only 100 metres and you encounter
+            a giant spider with vicious poison coated fangs.
+            its hideous appearance causes your throat to dry and your knees to shake!
+            What on earth will you do?
+        </prompt>
+        <choices>
+            <choice link="spiderattack">Attempt to attack the spider with your sword.</choice>
+            <choice link="throwsword">Throw your sword in the off chance it might kill it.","throwsword</choice>
+            <choice link="running">RUN FOR YOUR LIFE!</choice>
+        </choices>
+    </menu>
+
+    <menu name="spiderattack">
+        <prompt>
+            You viscously swing your sword at the spiders general direction.
+            The swing was so great, your arms jolts out of place,
+            creating a surge of pain.
+            Your arm is now broken, and you fall to the ground in pain...
+            The spider launches 3 metres straight into your body...
+            What on earth is it doing?
+            Oh My God! The spider is devouring everything...
+            All that remained was bones of the once mobile adventurer.
+        </prompt>
+    </menu>
+</menus>
