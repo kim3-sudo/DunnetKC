@@ -2,46 +2,59 @@
 <map>
   <room>
     <name>Entrance</name>
-    <description>You find yourself at the mouth of a cave and decide that in spite of common sense and any sense of self preservation that you're going to go exploring north into it.  It's a little dark, but luckily there are some torches on the wall.</description>
-    <item>torch</item>
+    <description>FLASH! A blinding light fills your entire field of vision. For a few seconds, everything goes dark. As you start to come to, you realize that this place looks familiar! You find yourself at the edge of the Kenyon College campus, right outside of Bexley Hall. There's only a crecent moon tonight, so you don't see much. You see a flashlight lying on the ground.</description>
+    <item>flashlight</item>
     <trigger>
       <type>permanent</type>
       <command>n</command>
       <condition>
         <has>no</has>
-        <object>torch</object>
+        <object>flashlight</object>
         <owner>inventory</owner>
       </condition>
       <print>*stumble* need some light...</print>
     </trigger>
     <border>
-      <direction>north</direction>
-      <name>MainCavern</name>
+      <direction>south</direction>
+      <name>Middle Path</name>
     </border>
   </room>
   <room>
-    <name>MainCavern</name>
-    <description>A huge cavern surrounds you with a locked door to the north, a chest in the center, and a very dark corner...</description>
-    <container>chest</container>
-    <container>lock</container>
-    <creature>gnome</creature>
-    <border>
-      <direction>south</direction>
-      <name>Entrance</name>
-    </border>
-    <border>
-      <direction>north</direction>
-      <name>Staircase</name>
-    </border>
-    <trigger>
-      <command>n</command>
-      <type>permanent</type>
-      <condition>
-        <object>lock</object>
-        <status>locked</status>
-      </condition>
-      <print>lock needs a key... not to mention you don't want to get too close to that side of the room... there's something in that corner...</print>
-    </trigger>
+    <name>Middle Path Eaton</name>
+    <description>As you walk, the ground shifts under your feet, but this isn't an earthquake. It's just the really loose gravel on Middle Path. Suddenly, you hit a soft spot in the ground.</description>
+    <item>cpu</item>
+    <item>alcohol</item>
+    <type>permanent</type>
+    <command>n</command>
+    <condition>
+      <has>yes</has>
+      <object>cpu</object>
+      <object>alcohol</object>
+      <owner>inventory</owner>
+    </condition>
+    <print>After a few sips of the rum that you found, you start to feel...looser.</print>
+  </room>
+  <room>
+    <name>Middle Path McBride</name>
+    <description>Out of the darkness, a golf cart pulls up next to you. There's a smiling face inside, but it quickly turns sour. What's that you're carrying?</description>
+    <item>alcohol</item>
+    <condition>
+      <has>yes</has>
+      <object>alcohol</object>
+      <owner>inventory</owner>
+    </condition>
+    <print>You should probably give that up...</print>
+  </room>
+  <room>
+    <name>Middle Path Wiggins</name>
+    <item>alcohol</item>
+    <condition>
+      <has>yes</has>
+      <object>alcohol</object>
+      <owner>inventory</owner>
+    </condition>
+    <print>The campo officer has been patient with you, but your continued ignorance has landed you in a pair of handcuffs.</print>
+    <print>You lose.</print>
   </room>
   <room>
     <type>exit</type>
