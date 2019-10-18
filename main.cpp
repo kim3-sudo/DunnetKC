@@ -3,16 +3,9 @@ using namespace std;
 using namespace rapidxml;
 
 int main(int argc, char *argv[]){
-    /*
-    if(argc != 2){
-        cout << "Error. Please enter: a.out filename.xml" <<endl;
-        return 1;
-    }
-    //file<> xmlFile(argv[1]);
-    */
     
     //xml_document<> doc;    // character type defaults to char
-    rapidxml::file<> xmlFile("sample.txt.xml");
+    rapidxml::file<> xmlFile("dunnet.xml");
     rapidxml::xml_document<> doc;
     doc.parse<0>(xmlFile.data());    // 0 means default parse flags
     
