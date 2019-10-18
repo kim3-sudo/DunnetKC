@@ -1,6 +1,5 @@
-#
 # In order to execute this "Makefile" just type "make"
-#
+# If you're getting a permission denied error (cannot write out main.o), try "sudo make" instead...
 
 OBJS	= main.o
 SOURCE	= main.cpp
