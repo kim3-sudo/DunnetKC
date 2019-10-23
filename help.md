@@ -6,12 +6,13 @@
 * `w` - go west
 * `u` - go up
 * `d` - go down
-* `Take <object>` - take the object, CaSe SeNsItIvE!
-* `Drop <object>` - drop the object, CaSe SeNsItIvE!
+* `take <object>` - take the object, CaSe SeNsItIvE!
+* `drop <object>` - drop the object, CaSe SeNsItIvE!
 * `look` - look around (display the description of the room)
 * `type` - type on the console
 * `put <object> in <object>` - put an object in another object
 * `canihazip` - display your IPv4 address
+* `i` - show inventory
 * `q` - quit and exit the program
 
 ## IBM Mainframe pseudo-commands
