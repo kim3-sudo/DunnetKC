@@ -12,6 +12,7 @@
 * `type` - type on the console
 * `put <object> in <object>` - put an object in another object
 * `canihazip` - display your IPv4 address
+* `q` - quit and exit the program
 
 ## IBM Mainframe pseudo-commands
 These aren't technically IBM TSO/E commands, but they're certainly derived from it.
