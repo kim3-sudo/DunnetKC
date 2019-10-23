@@ -56,7 +56,6 @@
     <print>The campo officer has been patient with you, but your continued ignorance has landed you in a pair of handcuffs.</print>
     <print>You lose.</print>
   </room>
-  <!--
   <room>
     <type>exit</type>
     <name>Staircase</name>
@@ -128,4 +127,3 @@
     </trigger>
   </creature>
 </map>
--->
