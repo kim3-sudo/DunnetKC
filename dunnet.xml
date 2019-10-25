@@ -2,8 +2,7 @@
 <map>
   <room>
     <name>Bexley</name>
-    <description>FLASH! A blinding light fills your entire field of vision. For a few seconds, everything goes dark. As you start to come to, you realize that this place looks familiar! You find yourself at the edge of the Kenyon College campus, right outside of Bexley Hall. There's only a crecent moon tonight, so you don't see much. You see a flashlight lying on the ground.</description>
-    <description>You can only go south.</description>
+    <description>FLASH! A blinding light fills your entire field of vision. For a few seconds, everything goes dark. As you start to come to, you realize that this place looks familiar! You find yourself at the edge of the Kenyon College campus, right outside of Bexley Hall. There's only a crecent moon tonight, so you don't see much. You see a flashlight lying on the ground. You can only go south.</description>
     <item>flashlight</item>
     <status>on</status>
     <trigger>
@@ -23,8 +22,7 @@
   </room>
   <room>
     <name>MiddlePathEaton</name>
-    <description>As you walk, the ground shifts under your feet, but this isn't an earthquake. It's just the really loose gravel on Middle Path. Suddenly, you hit a soft spot in the ground. You look, and there's a box with a CPU chip and a bottle of rum.</description>
-    <description>You are on a north/south path.</description>
+    <description>As you walk, the ground shifts under your feet, but this isn't an earthquake. It's just the really loose gravel on Middle Path. Suddenly, you hit a soft spot in the ground. You look, and there's a box with a CPU chip and a bottle of rum. You are on a north/south path.</description>
     <container>box</container>
     <item>cpu</item>
     <item>rum</item>
@@ -48,8 +46,7 @@
   </room>
   <room>
     <name>MiddlePathMcBride</name>
-    <description>Out of the darkness, a golf cart pulls up next to you. There's a smiling face inside, but it quickly turns sour. What's that you're carrying?</description>
-    <description>You are on a north/south path.</description>
+    <description>Out of the darkness, a golf cart pulls up next to you. There's a smiling face inside, but it quickly turns sour. What's that you're carrying? You are on a north/south path.</description>
     <item>rum</item>
     <condition>
       <has>yes</has>
@@ -69,8 +66,7 @@
   <room>
     <name>MiddlePathWiggins</name>
     <item>rum</item>
-    <description>If you haven't already dropped the bottle of rum, you might want to do that now. Otherwise, you can probably just keep going south.</description>
-    <description>You are on a north/south path. Walking on Wiggins Street isn't a good idea. The sheriff will get you for jaywalking...</description>
+    <description>If you haven't already dropped the bottle of rum, you might want to do that now. Otherwise, you can probably just keep going south. You are on a north/south path. Walking on Wiggins Street isn't a good idea. The sheriff will get you for jaywalking...</description>
     <condition>
       <has>yes</has>
       <object>rum</object>
@@ -89,8 +85,7 @@
   </room>
   <room>
     <name>MiddlePathAscension</name>
-    <description>You've been walking for a few minutes, and you find Ascension Hall to the east. Through the fog, you can see a building to the front.</description>
-    <description>You are at a three-way intersection: north/south and a separate path to the east.</description><border>
+    <description>You've been walking for a few minutes, and you find Ascension Hall to the east. Through the fog, you can see a building to the front. You are at a three-way intersection: north/south and a separate path to the east.</description><border>
       <direction>south</direction>
       <name>OldKenyon</name>
     </border>
@@ -105,11 +100,14 @@
   </room>
   <room>
     <name>OldKenyon</name>
-    <description>As the fog clears, you see the outline of a grand building. The ground rumbles as an Old Kenyon house party goes down.</description>
-    <description>You can only go north.</description>
+    <description>As the fog clears, you see the outline of a grand building. The ground rumbles as an Old Kenyon house party goes down. You can only go north.</description>
     <border>
       <direction>south</direction>
       <name>OldKDoor</name>
+    </border>
+    <border>
+      <direction>north</direction>
+      <name>MiddlePathAscension</name>
     </border>
   </room>
   <creature>
