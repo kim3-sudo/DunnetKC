@@ -125,8 +125,7 @@
   </creature>
   <room>
     <name>PeirceEntrance</name>
-    <description>You reach a strange building. Above the door, you see "Peirce Hall" engraved in the brick.</description>
-    <description>You are on a east/west path.</description>
+    <description>You reach a strange building. Above the door, you see "Peirce Hall" engraved in the brick. You are on a east/west path.</description>
     <condition>
       <has>yes</has>
       <object>key</object>
@@ -145,8 +144,7 @@
   </room>
   <room>
     <name>mdf</name>
-    <description>You push a mysterious door, and inside, there's an old and dusty IBM z/370 mainframe computer. All of the lights are dark, and the fans appear to be still.</description>
-    <description>You can only go west from here.</description>
+    <description>You push a mysterious door, and inside, there's an old and dusty IBM z/370 mainframe computer. All of the lights are dark, and the fans appear to be still. You can only go west from here.</description>
     <item>
       <name>mainframe</name>
       <writing>user admin, pass dcat</writing>
