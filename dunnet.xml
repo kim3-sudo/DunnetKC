@@ -136,15 +136,4 @@
       </turnon>
     </item>
   </room>
-  <unix>
-    <description>Modes: S/370 ESA /390 z/Arch</description>
-    <description>Using fthreads instead of pthreads</description>
-    <description>Dynamic loading support</description>
-    <description>Using shared libraries</description>
-    <description>HTTP Server support</description>
-    <description>No SIGABEND handler</description>
-    <command>
-      <cmd>dir</cmd>
-      <print></print>
-    </command>
-  </unix>
+
