@@ -22,7 +22,7 @@
   </room>
   <room>
     <name>MiddlePathEaton</name>
-    <description>As you walk, the ground shifts under your feet, but this isn't an earthquake. It's just the really loose gravel on Middle Path. Suddenly, you hit a soft spot in the ground.</description>
+    <description>As you walk, the ground shifts under your feet, but this isn't an earthquake. It's just the really loose gravel on Middle Path. Suddenly, you hit a soft spot in the ground. You look, and there's a box with a CPU chip and a bottle of rum.</description>
     <container>box</container>
     <item>cpu</item>
     <item>rum</item>
