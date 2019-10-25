@@ -16,12 +16,13 @@
     </trigger>
     <border>
       <direction>south</direction>
-      <name>Middle Path</name>
+      <name>MiddlePathEaton</name>
     </border>
   </room>
   <room>
-    <name>Middle Path Eaton</name>
+    <name>MiddlePathEaton</name>
     <description>As you walk, the ground shifts under your feet, but this isn't an earthquake. It's just the really loose gravel on Middle Path. Suddenly, you hit a soft spot in the ground.</description>
+    <container>box</container>
     <item>cpu</item>
     <item>rum</item>
     <type>permanent</type>
@@ -32,10 +33,14 @@
       <object>rum</object>
       <owner>inventory</owner>
     </condition>
-    <print>After a few sips of the rum that you found, you start to feel...looser.</print>
+    <print>After a few sips of the rum that you found, you start to feel...warmer.</print>
+    <border>
+      <direction>south</direction>
+      <name>MiddlePathMcBride</name>
+    </border>
   </room>
   <room>
-    <name>Middle Path McBride</name>
+    <name>MiddlePathMcBride</name>
     <description>Out of the darkness, a golf cart pulls up next to you. There's a smiling face inside, but it quickly turns sour. What's that you're carrying?</description>
     <item>rum</item>
     <condition>
@@ -46,7 +51,7 @@
     <print>Drinking rum in front of that campo officer doesn't sound like a good idea to me.</print>
   </room>
   <room>
-    <name>Middle Path Wiggins</name>
+    <name>MiddlePathWiggins</name>
     <item>rum</item>
     <condition>
       <has>yes</has>
