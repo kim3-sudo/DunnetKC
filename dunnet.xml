@@ -14,6 +14,36 @@
       </condition>
       <print>*stumble* need some light...</print>
     </trigger>
+    <trigger>
+      <type>permanent</type>
+      <command>e</command>
+      <condition>
+        <has>no</has>
+        <object>flashlight</object>
+        <owner>inventory</owner>
+      </condition>
+      <print>*stumble* need some light...</print>
+    </trigger>
+    <trigger>
+      <type>permanent</type>
+      <command>s</command>
+      <condition>
+        <has>no</has>
+        <object>flashlight</object>
+        <owner>inventory</owner>
+      </condition>
+      <print>*stumble* need some light...</print>
+    </trigger>
+    <trigger>
+      <type>permanent</type>
+      <command>w</command>
+      <condition>
+        <has>no</has>
+        <object>flashlight</object>
+        <owner>inventory</owner>
+      </condition>
+      <print>*stumble* need some light...</print>
+    </trigger>
     <border>
       <direction>south</direction>
       <name>MiddlePathEaton</name>
