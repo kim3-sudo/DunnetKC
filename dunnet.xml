@@ -57,7 +57,7 @@
     <item>rum</item>
     <type>permanent</type>
     <trigger>
-      <command>take rum</command>
+      <command>s</command>
       <condition>
         <has>y</has>
         <object>rum</object>
@@ -131,6 +131,11 @@
     <description>You're playing with fire here. Want to keep going?</description>
     <trigger>
       <command>e</command>
+      <condition>
+        <has>no</has>
+        <object>rum</object>
+        <owner>inventory</owner>
+      </condition>
       <print>Why would you try and walk in the street? The deputy sheriff saw you and instituted his "street justice" policy, which means he ran you over. You lose. (See Kenyon Collegiate, 2018, issue 11.2 for the street justice policy.)</print>
     </trigger>
     <border>
@@ -143,6 +148,11 @@
     <description>You're playing with fire here. Want to keep going?</description>
     <trigger>
       <command>w</command>
+      <condition>
+        <has>no</has>
+        <object>rum</object>
+        <owner>inventory</owner>
+      </condition>
       <print>Why would you try and walk in the street? The deputy sheriff saw you and instituted his "street justice" policy, which means he ran you over. You lose. (See Kenyon Collegiate, 2018, issue 11.2 for the street justice policy.)</print>
     </trigger>
     <border>
