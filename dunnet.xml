@@ -26,13 +26,6 @@
     <item>cpu</item>
     <item>rum</item>
     <type>permanent</type>
-    <command>n</command>
-    <condition>
-      <has>yes</has>
-      <object>cpu</object>
-      <object>rum</object>
-      <owner>inventory</owner>
-    </condition>
     <trigger>
       <command>take rum</command>
       <condition>
@@ -53,7 +46,7 @@
   </room>
   <room>
     <name>MiddlePathMcBride</name>
-    <description>Out of the darkness, a golf cart pulls up next to you. There's a smiling face inside, but it quickly turns sour. What's that you're carrying? You are on a north/south path.</description>
+    <description>Out of the darkness, a golf cart pulls up next to you. You are on a north/south path.</description>
     <trigger>
       <command>south</command>
       <type>permanent</type>
@@ -76,7 +69,7 @@
   <room>
     <name>MiddlePathWiggins</name>
     <item>rum</item>
-    <description>If you haven't already dropped the bottle of rum, you might want to do that now. You are at the four way intersection of Middle Path and Wiggins Street. </description>
+    <description>You are at the four way intersection of Middle Path and Wiggins Street. </description>
     <trigger>
       <command>south</command>
       <condition>
@@ -94,6 +87,13 @@
       <direction>north</direction>
       <name>MiddlePathMcBride</name>
     </border>
+    <border>
+      <direction>east</direction>
+      <name>WigginsEast</name>
+    </border>
+    <border>
+      <direction>west</direction>
+      <name>WigginsWest</name>
   </room>
   <room>
     <name>WigginsEast</name>
