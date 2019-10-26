@@ -177,6 +177,7 @@
   </room>
   <room>
     <name>OldKenyon</name>
+    <creature>baked student</creature>
     <description>As the fog clears, you see the outline of a grand building. The ground rumbles as an Old Kenyon house party goes down. There's a figure standing in the nighttime mist. You can only go north.</description>
     <border>
       <direction>south</direction>
@@ -188,7 +189,7 @@
     </border>
   </room>
   <creature>
-    <name>bakedStudent</name>
+    <name>baked student</name>
     <vulnerability>flashlight</vulnerability>
     <attack>
       <condition>
