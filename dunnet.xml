@@ -78,7 +78,7 @@
     <name>MiddlePathMcBride</name>
     <description>Out of the darkness, a golf cart pulls up next to you. You are on a north/south path.</description>
     <trigger>
-      <command>south</command>
+      <command>s</command>
       <type>permanent</type>
       <condition>
         <has>yes</has>
@@ -101,7 +101,7 @@
     <item>rum</item>
     <description>You are at the four way intersection of Middle Path and Wiggins Street. </description>
     <trigger>
-      <command>south</command>
+      <command>s</command>
       <condition>
         <has>yes</has>
         <object>rum</object>
