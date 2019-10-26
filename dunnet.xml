@@ -38,7 +38,7 @@
       <condition>
         <has>y</has>
         <object>rum</object>
-        <owner>inventory<owner>
+        <owner>inventory</owner>
       </condition>
       <print>After a few sips of the rum that you found, you start to feel...warmer.</print>
     </trigger>
