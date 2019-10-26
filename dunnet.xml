@@ -4,7 +4,6 @@
     <name>Bexley</name>
     <description>FLASH! A blinding light fills your entire field of vision. For a few seconds, everything goes dark. As you start to come to, you realize that this place looks familiar! You find yourself at the edge of the Kenyon College campus, right outside of Bexley Hall. There's only a crecent moon tonight, so you don't see much. You see a flashlight lying on the ground. You can only go south.</description>
     <item>flashlight</item>
-    <status>on</status>
     <trigger>
       <type>permanent</type>
       <command>n</command>
@@ -34,7 +33,15 @@
       <object>rum</object>
       <owner>inventory</owner>
     </condition>
-    <print>After a few sips of the rum that you found, you start to feel...warmer.</print>
+    <trigger>
+      <command>take rum</command>
+      <condition>
+        <has>y</has>
+        <object>rum</object>
+        <owner>inventory<owner>
+      </condition>
+      <print>After a few sips of the rum that you found, you start to feel...warmer.</print>
+    </trigger>
     <border>
       <direction>south</direction>
       <name>MiddlePathMcBride</name>
@@ -47,13 +54,16 @@
   <room>
     <name>MiddlePathMcBride</name>
     <description>Out of the darkness, a golf cart pulls up next to you. There's a smiling face inside, but it quickly turns sour. What's that you're carrying? You are on a north/south path.</description>
-    <item>rum</item>
-    <condition>
-      <has>yes</has>
-      <object>rum</object>
-      <owner>inventory</owner>
-    </condition>
-    <print>Drinking rum in front of that campo officer doesn't sound like a good idea to me.</print>
+    <trigger>
+      <command>south</command>
+      <type>permanent</type>
+      <condition>
+        <has>yes</has>
+        <object>rum</object>
+        <owner>inventory</owner>
+      </condition>
+      <print>Drinking rum in front of that campo officer doesn't seem like a good idea to me...but you proceed anyways...</print>
+    </trigger>
     <border>
       <direction>south</direction>
       <name>MiddlePathWiggins</name>
@@ -66,14 +76,16 @@
   <room>
     <name>MiddlePathWiggins</name>
     <item>rum</item>
-    <description>If you haven't already dropped the bottle of rum, you might want to do that now. Otherwise, you can probably just keep going south. You are on a north/south path. Walking on Wiggins Street isn't a good idea. The sheriff will get you for jaywalking...</description>
-    <condition>
-      <has>yes</has>
-      <object>rum</object>
-      <owner>inventory</owner>
-    </condition>
-    <print>The campo officer has been patient with you, but your continued ignorance has landed you in a pair of handcuffs.</print>
-    <print>You lose.</print>
+    <description>If you haven't already dropped the bottle of rum, you might want to do that now. You are at the four way intersection of Middle Path and Wiggins Street. </description>
+    <trigger>
+      <command>south</command>
+      <condition>
+        <has>yes</has>
+        <object>rum</object>
+        <owner>inventory</owner>
+      </condition>
+      <print>The campo officer has been patient with you, but your continued ignorance has landed you in a pair of handcuffs. You lose.</print>
+    </trigger>
     <border>
       <direction>south</direction>
       <name>MiddlePathAscension</name>
@@ -81,6 +93,30 @@
     <border>
       <direction>north</direction>
       <name>MiddlePathMcBride</name>
+    </border>
+  </room>
+  <room>
+    <name>WigginsEast</name>
+    <description>You're playing with fire here. Want to keep going?</description>
+    <trigger>
+      <command>e</command>
+      <print>Why would you try and walk in the street? The deputy sheriff saw you and instituted his "street justice" policy, which means he ran you over. You lose. (See Kenyon Collegiate, 2018, issue 11.2 for the street justice policy.)</print>
+    </trigger>
+    <border>
+      <name>MiddlePathWiggins</name>
+      <direction>west</direction>
+    </border>
+  </room>
+  <room>
+    <name>WigginsWest</name>
+    <description>You're playing with fire here. Want to keep going?</description>
+    <trigger>
+      <command>w</command>
+      <print>Why would you try and walk in the street? The deputy sheriff saw you and instituted his "street justice" policy, which means he ran you over. You lose. (See Kenyon Collegiate, 2018, issue 11.2 for the street justice policy.)</print>
+    </trigger>
+    <border>
+      <name>MiddlePathWiggins</name>
+      <direction>east</direction>
     </border>
   </room>
   <room>
@@ -100,7 +136,7 @@
   </room>
   <room>
     <name>OldKenyon</name>
-    <description>As the fog clears, you see the outline of a grand building. The ground rumbles as an Old Kenyon house party goes down. You can only go north.</description>
+    <description>As the fog clears, you see the outline of a grand building. The ground rumbles as an Old Kenyon house party goes down. There's a figure standing in the nighttime mist. You can only go north.</description>
     <border>
       <direction>south</direction>
       <name>OldKDoor</name>
@@ -116,9 +152,9 @@
     <attack>
       <condition>
         <object>flashlight</object>
-        <status>on</status>
+        <owner>inventory</owner>
       </condition>
-      <print>You shine the flashlight in their face and they scuttle away. They drop something shiny.</print>
+      <print>You shine the flashlight in their face and they scuttle away. They dropped something...looks like a key to me.</print>
       <action>Add key to OldKenyon</action>
       <action>Delete bakedStudent</action>
     </attack>

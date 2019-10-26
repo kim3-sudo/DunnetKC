@@ -4,11 +4,11 @@
 OBJS	= main.o
 SOURCE	= main.cpp
 HEADER	= Attack.h Container.h Creature.h Item.h Room.h Trigger.h header.h
-OUT	= main.out
+OUT	= main
 CC	 = g++
 FLAGS	 = -g -c -Wall
-LFLAGS	 = 
-# -g option enables debugging mode 
+LFLAGS	 =
+# -g option enables debugging mode
 # -c flag generates object code for separate files
 
 
@@ -24,3 +24,5 @@ main.o: main.cpp
 # clean house
 clean:
 	rm -f $(OBJS) $(OUT)
+
+# To run the program, use ./main
