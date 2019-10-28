@@ -81,8 +81,8 @@ int main(int argc, char *argv[]){
         if(overridden){continue;}
         cout << "\n";
         cout << ">";
-        cout << "\n";
         getline(cin, input);
+        cout << "\n";
         //Quit Command
         if(string(input) == string("q")){break;}
         
