@@ -25,6 +25,11 @@
       </condition>
       <print>*stumble* need some light...</print>
     </trigger>
+    <item>
+      <name>flashlight</name>
+      <writing>next to a small button it reads "push for big flame"</writing>
+      <status>on</status>
+    </item>
     <trigger>
       <type>permanent</type>
       <command>s</command>
