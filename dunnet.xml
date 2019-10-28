@@ -108,7 +108,6 @@
         <owner>inventory</owner>
       </condition>
       <print>The campo officer has been patient with you, but your continued ignorance has landed you in a pair of handcuffs. You lose.</print>
-      <command>q</command>
     </trigger>
     <border>
       <direction>south</direction>
