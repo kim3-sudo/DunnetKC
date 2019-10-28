@@ -2,7 +2,7 @@
 <map>
   <room>
     <name>Bexley</name>
-    <description>FLASH! A blinding light fills your entire field of vision. For a few seconds, everything goes dark. As you start to come to, you realize that this place looks familiar! You find yourself at the edge of the Kenyon College campus, right outside of Bexley Hall. There's only a crecent moon tonight, so you don't see much. You see a flashlight lying on the ground. You can only go south.</description>
+    <description>Type 'help' to view the help commands. FLASH! A blinding light fills your entire field of vision. For a few seconds, everything goes dark. As you start to come to, you realize that this place looks familiar! You find yourself at the edge of the Kenyon College campus, right outside of Bexley Hall. There's only a crecent moon tonight, so you don't see much. You see a flashlight lying on the ground. You can only go south.</description>
     <item>flashlight</item>
     <status>on</status>
     <trigger>
