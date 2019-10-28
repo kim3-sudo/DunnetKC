@@ -608,6 +608,21 @@ void checkInput(string input){
         attack(monster, weapon);
         return;
     }
+	if(input == "help"){
+		cout << "n - go north" << endl;
+		cout << "s - go south" << endl;
+		cout << "e - go east" << endl;
+		cout << "w - go west" << endl;
+		cout << "take <object> - take the object, CaSe SeNsItIvE!" << endl;
+		cout << "drop <object> - drop the object, CaSe SeNsItIvE!" << endl;
+		cout << "i - show inventory" << endl;
+		cout << "canihazip - display your IPv4 address (in the game)" << endl;
+		cout << "q - quit and exit game" << endl;
+		return;
+	}
+	if (input == "canihazip"){
+		cout << "192.168.56.102" << endl;
+	}
   cout << "Error" << endl;
 }
 
