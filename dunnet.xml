@@ -29,6 +29,10 @@
       <name>flashlight</name>
       <writing>next to a small button it reads "push for big flame"</writing>
       <status>on</status>
+      <turnon>
+        <print>The flashlight seems kind of dim, but it'll do.</print>
+        <action>Update flashlight to on</action>
+      </turnon>
     </item>
     <trigger>
       <type>permanent</type>
