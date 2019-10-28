@@ -79,10 +79,8 @@ int main(int argc, char *argv[]){
         overridden = checkTrigger_nocommand();
         if(END){break;}
         if(overridden){continue;}
-        cout << "\n";
         cout << ">";
         getline(cin, input);
-        cout << "\n";
         //Quit Command
         if(string(input) == string("q")){break;}
         
