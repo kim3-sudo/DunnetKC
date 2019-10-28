@@ -622,6 +622,7 @@ void checkInput(string input){
 	}
 	if (input == "canihazip"){
 		cout << "192.168.56.102" << endl;
+		return;
 	}
   cout << "Error" << endl;
 }
