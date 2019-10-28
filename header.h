@@ -415,7 +415,7 @@ void attack(string monster, string weapon){
         cout<<"There is no such thing called "<<weapon<<" in your inventory."<<endl;
         return;
     }
-    cout<<"You assault the "<<monster<<" with the "<<weapon<<endl;
+    cout<<"You shine the "<<weapon<<" at the "<<monster<<endl;
     //third, check if weapon matches the vulnerability
     for(i = 0; i<creatures.size(); i++){
         if(creatures[i]->name == monster){ break;}
