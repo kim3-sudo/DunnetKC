@@ -73,13 +73,9 @@
     <name>MiddlePathMcBride</name>
     <description>Out of the darkness, a golf cart pulls up next to you. There's a friendly looking face inside. You lean in for a closer look. You are on a north/south path.</description>
     <trigger>
-      <type>permanent</type>
-      <condition>
-        <has>yes</has>
-        <object>rum</object>
-        <owner>inventory</owner>
-      </condition>
-      <print>Drinking rum in front of that campo officer doesn't seem like a good idea to me...but you proceed anyways...</print>
+      <command>look</command>
+      <type>single</type>
+      <print>Looks like a Kenyon campo officer to me.</print>
     </trigger>
     <border>
       <direction>south</direction>
@@ -94,6 +90,16 @@
     <name>MiddlePathWiggins</name>
     <item>rum</item>
     <description>You are at the four way intersection of Middle Path and Wiggins Street. </description>
+    <trigger>
+      <command>s</command>
+      <type>single</type>
+      <condition>
+        <has>yes</has>
+        <object>rum</object>
+        <owner>inventory</owner>
+      </condition>
+      <print>Drinking rum in front of that campo officer doesn't seem like a good idea to me...but you proceed anyways...</print>
+    </trigger>
     <trigger>
       <command>s</command>
       <condition>
@@ -190,7 +196,7 @@
         <object>flashlight</object>
         <owner>inventory</owner>
       </condition>
-      <print>You shine the flashlight in their face and they scuttle away. They dropped something...looks like a key to me.</print>
+      <print>You shine the flashlight in their face. They get scared and scuttle away. They dropped something...looks like a key to me.</print>
       <action>Add key to OldKenyon</action>
       <action>Delete bakedStudent</action>
     </attack>
