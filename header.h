@@ -494,9 +494,7 @@ void attack(string monster, string weapon){
 
 /********************User input manager***************************/
 void checkInput(string input){
-	srand(time(nullptr));
-	RAND_MAX = 253;
-	int random_variable = rand();
+	int ipdev = rand() % 100 + 1;
     if(input == "n" || input == "s" || input == "w" || input == "e"){
         changeRoom(input);
         return;
@@ -626,7 +624,7 @@ void checkInput(string input){
 		return;
 	}
 	if (input == "canihazip"){
-		cout << "192.168.56." << random_variable << endl;
+		cout << "192.168.56." << ipdev << endl;
 		return;
 	}
   cout << "Error" << endl;
