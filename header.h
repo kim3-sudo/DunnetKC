@@ -495,7 +495,7 @@ void attack(string monster, string weapon){
 /********************User input manager***************************/
 void checkInput(string input){
 	srand(time(nullptr));
-	int RAND_MAX = 253;
+	RAND_MAX = 253;
 	int random_variable = rand();
     if(input == "n" || input == "s" || input == "w" || input == "e"){
         changeRoom(input);
