@@ -88,6 +88,9 @@ private:
                 Trigger * t = new Trigger(kid);
                 trigger.push_back(t);
 			}
+			if(string(kid->name()) == "lose"){
+				break;
+			}
        }
 	}
 };
