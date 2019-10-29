@@ -147,6 +147,7 @@
         <owner>inventory</owner>
       </condition>
       <print>Why would you try and walk in the street? The deputy sheriff saw you and instituted his "street justice" policy, which means he ran you over. You lose. (See Kenyon Collegiate, 2018, issue 11.2 for the street justice policy.)</print>
+      <lose></lose>
     </trigger>
     <border>
       <name>MiddlePathWiggins</name>
@@ -164,6 +165,7 @@
         <owner>inventory</owner>
       </condition>
       <print>Why would you try and walk in the street? The deputy sheriff saw you and instituted his "street justice" policy, which means he ran you over. You lose. (See Kenyon Collegiate, 2018, issue 11.2 for the street justice policy.)</print>
+      <lose></lose>    
     </trigger>
     <border>
       <name>MiddlePathWiggins</name>
