@@ -6,6 +6,8 @@ Kenyon College F19 - SCMP 318 Software Development, Prof. Jim Skon
 
 The full specifications for the original project can be found [here](https://cs.kenyon.edu/do/view/Main/XMLGameDesign).
 
+If you'd like to play the real Dunnet, you'll need access to a Unix-like machine with Emacs installed. Use the command `emacs -batch -l dunnet` to launch the game.
+
 # Files
 ## /DunnetKC
 The current version of the Dunnet game. This version uses the RapidXML v1.13 parser package from Marcin Kalicinski. Their parser is licensed under the Boost Software License, v1.0 spec 2003-08-17, and is (c) 2006, 2007 Marcin Kalicinski.
