@@ -7,6 +7,8 @@
 #include<vector>
 #include<string>
 #include<list>
+#include<cstdlib>
+#include<ctime>
 #include "rapidxml-1.13/rapidxml.hpp"
 #include "rapidxml-1.13/rapidxml_utils.hpp"
 #include "rapidxml-1.13/rapidxml_print.hpp"
@@ -492,6 +494,9 @@ void attack(string monster, string weapon){
 
 /********************User input manager***************************/
 void checkInput(string input){
+	srand(time(nullptr));
+	int RAND_MAX = 253;
+	int random_variable = rand();
     if(input == "n" || input == "s" || input == "w" || input == "e"){
         changeRoom(input);
         return;
@@ -621,7 +626,7 @@ void checkInput(string input){
 		return;
 	}
 	if (input == "canihazip"){
-		cout << "192.168.56.102" << endl;
+		cout << "192.168.56." << random_variable << endl;
 		return;
 	}
   cout << "Error" << endl;
