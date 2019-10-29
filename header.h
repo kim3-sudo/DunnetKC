@@ -612,6 +612,7 @@ void checkInput(string input){
         return;
     }
 	if(input == "help"){
+		cout << "help - display this help" << endl;
 		cout << "n - go north" << endl;
 		cout << "s - go south" << endl;
 		cout << "e - go east" << endl;
