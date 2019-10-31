@@ -5,25 +5,22 @@ OBJS	= kenyondunnet.o zork.o
 SOURCE	= kenyondunnet.cpp zork.cpp
 HEADER	= Attack.h Container.h Creature.h Item.h Room.h Trigger.h header.h
 OUT	= kenyondunnet zork
-CC	 = g++
-FLAGS	 = -g -c -Wall
-LFLAGS	 =
+LFLAGS	 = 
 # -g option enables debugging mode
 # -c flag generates object code for separate files
 
-
-all: $(OBJS)
-	$(CC) -g $(OBJS) -o $(OUT) $(LFLAGS)
-
+all: kenyondunnet zork
 
 # create/compile the individual files >>separately<<
-kenyondunnet.o: kenyondunnet.cpp
-	$(CC) $(FLAGS) kenyondunnet.cpp -std=c11
-zork.o: zork.cpp
-	$(CC) $(FLAGS) zork.cpp -std=c11
 
+kenyondunnet zork: $(OBJS)
+	$(CC) -o $@ $^ $(LFLAGS)
 
-# clean house
+%.o: %.c $(HEADER)
+	$(CC) -c -o $@ $< $(LFLAGS)
+
+# clean this house
+
 clean:
 	rm -f $(OBJS) $(OUT)
 
