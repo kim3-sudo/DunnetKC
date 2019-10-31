@@ -592,7 +592,7 @@ void checkInput(string input){
         return;
     }
     //shine
-    if(input == "shine"){
+    if(input == "shine "){
         cout << "What do you want to shine? ";
         getline(cin, input);
         string monster = input;
@@ -602,7 +602,7 @@ void checkInput(string input){
         attack(monster, weapon);
         return;
     }
-    if(input.find("shine") != string::npos){
+    if(input.find("shine ") != string::npos){
         input.erase(0,7);
         int space_pos = input.find(" "); //it's also size of item string
         string monster = input.substr(0, space_pos);
