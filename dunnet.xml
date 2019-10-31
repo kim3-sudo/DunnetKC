@@ -67,7 +67,13 @@
     <item>rum</item>
     <type>permanent</type>
     <trigger>
+      <type>permanent</type>
       <command>take rum</command>
+      <condition>
+        <has>yes</has>
+        <object>rum</object>
+        <owner>inventory</owner>
+      </condition>
       <print>After a few sips of the rum that you found, you start to feel...warmer.</print>
     </trigger>
     <border>
@@ -81,11 +87,21 @@
   </room>
   <room>
     <name>MiddlePathMcBride</name>
-    <description>Out of the darkness, a golf cart pulls up next to you. There's a friendly looking face inside. You lean in for a closer look. You are on a north/south path.</description>
+    <description>Out of the darkness, a golf cart pulls up next to you. There's a friendly looking face inside. You lean in for a closer look. It's a campus safety officer! You are on a north/south path.</description>
     <trigger>
       <command>look</command>
-      <type>single</type>
+      <type>permanent</type>
       <print>Looks like a Kenyon campo officer to me.</print>
+    </trigger>
+    <trigger>
+      <command>s</command>
+      <type>single</type>
+      <condition>
+        <has>yes</has>
+        <object>rum</object>
+        <owner>inventory</owner>
+      </condition>
+      <print>Drinking rum in front of that campo officer doesn't seem like a good idea to me...but you proceed anyways...</print>
     </trigger>
     <border>
       <direction>south</direction>
@@ -100,16 +116,6 @@
     <name>MiddlePathWiggins</name>
     <item>rum</item>
     <description>You are at the four way intersection of Middle Path and Wiggins Street. </description>
-    <trigger>
-      <command>s</command>
-      <type>single</type>
-      <condition>
-        <has>yes</has>
-        <object>rum</object>
-        <owner>inventory</owner>
-      </condition>
-      <print>Drinking rum in front of that campo officer doesn't seem like a good idea to me...but you proceed anyways...</print>
-    </trigger>
     <trigger>
       <command>s</command>
       <condition>
@@ -139,38 +145,34 @@
   <room>
     <name>WigginsEast</name>
     <description>You're playing with fire here. Want to keep going?</description>
-    <trigger>
-      <command>e</command>
-      <condition>
-        <has>no</has>
-        <object>rum</object>
-        <owner>inventory</owner>
-      </condition>
-      <print>Why would you try and walk in the street? The deputy sheriff saw you and instituted his "street justice" policy, which means he ran you over. You lose. (See Kenyon Collegiate, 2018, issue 11.2 for the street justice policy.)</print>
-      <lose>lose</lose>
-    </trigger>
     <border>
       <name>MiddlePathWiggins</name>
       <direction>west</direction>
     </border>
+    <border>
+      <name>WigginsEastLose</name>
+      <direction>east</direction>
+    </border>
+  </room>
+  <room>
+    <name>WigginsEastLose</name>
+    <description>Why would you try and walk in the street? The deputy sheriff saw you and instituted his "street justice" policy, which means he ran you over. You lose. (See Kenyon Collegiate, 2018, issue 11.2 for the street justice policy.) Type 'q' to exit.</description>
   </room>
   <room>
     <name>WigginsWest</name>
     <description>You're playing with fire here. Want to keep going?</description>
-    <trigger>
-      <command>w</command>
-      <condition>
-        <has>no</has>
-        <object>rum</object>
-        <owner>inventory</owner>
-      </condition>
-      <print>Why would you try and walk in the street? The deputy sheriff saw you and instituted his "street justice" policy, which means he ran you over. You lose. (See Kenyon Collegiate, 2018, issue 11.2 for the street justice policy.)</print>
-      <lose>lose</lose>    
-    </trigger>
     <border>
       <name>MiddlePathWiggins</name>
       <direction>east</direction>
     </border>
+    <border>
+      <name>WigginsWestLose</name>
+      <direction>west</direction>
+    </border>
+  </room>
+  <room>
+    <name>WigginsWestLose</name>
+    <description>Why would you try and walk in the street? The deputy sheriff saw you and instituted his "street justice" policy, which means he ran you over. You lose. (See Kenyon Collegiate, 2018, issue 11.2 for the street justice policy.) Type 'q' to exit.</description>
   </room>
   <room>
     <name>MiddlePathAscension</name>
