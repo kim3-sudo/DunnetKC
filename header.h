@@ -204,7 +204,7 @@ void showInventory(){
 		return;
 	}
 	cout << "Inventory: ";
-	int ind = 0;
+	uint ind = 0;
 	for(; ind < i - 1; ind++){
 		cout << inventory[ind] << ",";
 	}
