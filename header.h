@@ -355,7 +355,7 @@ void turnon(string input){
 }
 
 void open(string input){
-    int a;
+    uint a;
     for(a = 0; a < current -> container.size(); a++){
         if(current -> container[a] == input){
             break;
