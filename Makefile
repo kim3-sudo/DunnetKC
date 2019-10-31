@@ -19,7 +19,7 @@ all: $(OBJS)
 # create/compile the individual files >>separately<<
 kenyondunnet.o: kenyondunnet.cpp
 	$(CC) $(FLAGS) kenyondunnet.cpp -std=c11
-zork.o: zork.cp
+zork.o: zork.cpp
 	$(CC) $(FLAGS) zork.cpp -std=c11
 
 
