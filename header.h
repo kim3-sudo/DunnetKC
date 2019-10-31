@@ -177,12 +177,12 @@ void checkAction(string action){
 /*************User Defined Functions - Handle inputs**************/
 void changeRoom(string input){
     uint i = (current -> border).size();
-    int ind = 0;
+    uint ind = 0;
     for(;ind < i; ind++){
         if(current -> border[ind] -> direction == input){
             string newroom = current -> border[ind] -> name;
             uint j = rooms.size();
-            for(int ind2 = 0; ind2 < j; ind2++){
+            for(uint ind2 = 0; ind2 < j; ind2++){
                 if(rooms[ind2] -> name == newroom){
                     current = rooms[ind2];
                 }
