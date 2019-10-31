@@ -1,10 +1,10 @@
 # In order to execute this "Makefile" just type "make"
 # If you're getting a permission denied error (cannot write out main.o), try "sudo make" instead...
 
-OBJS	= main.o
-SOURCE	= main.cpp
+OBJS	= kenyondunnet.o zork.o
+SOURCE	= kenyondunnet.cpp zork.cpp
 HEADER	= Attack.h Container.h Creature.h Item.h Room.h Trigger.h header.h
-OUT	= main
+OUT	= kenyondunnet zork
 CC	 = g++
 FLAGS	 = -g -c -Wall
 LFLAGS	 =
@@ -17,12 +17,15 @@ all: $(OBJS)
 
 
 # create/compile the individual files >>separately<<
-main.o: main.cpp
-	$(CC) $(FLAGS) main.cpp -std=c11
+kenyondunnet.o: kenyondunnet.cpp
+	$(CC) $(FLAGS) kenyondunnet.cpp -std=c11
+zork.o: zork.cp
+	$(CC) $(FLAGS) zork.cpp -std=c11
 
 
 # clean house
 clean:
 	rm -f $(OBJS) $(OUT)
 
-# To run the program, use ./main
+# To run the customized dunnet program, use ./kenyondunnet
+# To run the original Zork program, use ./zork
