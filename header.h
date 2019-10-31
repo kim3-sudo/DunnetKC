@@ -37,7 +37,7 @@ void Add(string cond){
     int to_pos = cond.find(" to ");
     object_name = cond.substr(0, to_pos);
     location = cond.substr(to_pos + 4);
-    int i;
+    uint i;
     string object_type = istypeof(object_name);
     if(object_type == "Item"){
         for(i = 0; i < rooms.size(); i++){
@@ -71,7 +71,7 @@ void Add(string cond){
     }
 }
 void Delete(string object_name){
-    int i,j,k;
+    uint i,j,k;
     for(i = 0; i < rooms.size(); i++){
         if(rooms[i]->name == object_name){
             for(j = 0; j < current -> border.size(); j++){
@@ -124,7 +124,7 @@ void Update(string cond){
     int to_pos = cond.find(" to ");
     object_name = cond.substr(0, to_pos);
     new_status = cond.substr(to_pos + 4);
-    int i;
+    uint i;
     for(i = 0; i < rooms.size(); i++){
         if(rooms[i]->name == object_name){
             rooms[i]->status = new_status;
@@ -176,12 +176,12 @@ void checkAction(string action){
 
 /*************User Defined Functions - Handle inputs**************/
 void changeRoom(string input){
-    int i = (current -> border).size();
+    uint i = (current -> border).size();
     int ind = 0;
     for(;ind < i; ind++){
         if(current -> border[ind] -> direction == input){
             string newroom = current -> border[ind] -> name;
-            int j = rooms.size();
+            uint j = rooms.size();
             for(int ind2 = 0; ind2 < j; ind2++){
                 if(rooms[ind2] -> name == newroom){
                     current = rooms[ind2];
@@ -198,7 +198,7 @@ void changeRoom(string input){
 }
 
 void showInventory(){
-	int i = inventory.size();
+	uint i = inventory.size();
 	if(i == 0){
 		cout << "Inventory: Empty" << endl;
 		return;
@@ -212,7 +212,7 @@ void showInventory(){
 }
 
 void take(string input){
-    int i,j,k;
+    uint i,j,k;
 	for(i = 0; i < (current -> item).size(); i++){
 		if(current -> item[i] == input){
 			inventory.push_back(input);
@@ -242,7 +242,7 @@ void take(string input){
 }
 
 void drop(string input){
-    for(int i = 0; i < inventory.size(); i++){
+    for(uint i = 0; i < inventory.size(); i++){
         if(inventory[i] == input){
             (current -> item).push_back(input);
             inventory.erase(inventory.begin() + i);
@@ -254,10 +254,10 @@ void drop(string input){
 }
 
 void read(string input){
-    for(int i = 0; i < inventory.size(); i++){
+    for(uint i = 0; i < inventory.size(); i++){
         if(inventory[i] == input){
             //Then I can read
-            for(int j = 0; j < items.size(); j++){
+            for(uint j = 0; j < items.size(); j++){
                 if(items[j] -> name == input){
                     if(items[j] -> writing.size() == 0){
                         cout<<"There's nothing to read." << endl;
@@ -275,12 +275,12 @@ void read(string input){
 void put(string a, string b){
     /*put a to b*/
     //check if a is in inventory
-    int i = 0;
+    uint i = 0;
     for(; i < inventory.size(); i++){
         if(inventory[i] == a){
             //Then I can put
             //check if the current room is b
-            int j = 0;
+            uint j = 0;
             if(current -> name == b){
                 drop(a);
                 return;
@@ -308,7 +308,7 @@ void put(string a, string b){
                         }
                         return;
                     }
-                    for(int k = 0;k < containers[j]->accept.size();k++){
+                    for(uint k = 0;k < containers[j]->accept.size();k++){
                         if(containers[j] -> accept[k] == a){
                             containers[j] -> item.push_back(a);
                             inventory.erase(inventory.begin() + i);
@@ -334,9 +334,9 @@ void turnon(string input){
     //check if item is in inventory
     //check if the item can be turned on
     //turn on item
-    for(int i = 0; i < inventory.size(); i++){
+    for(uint i = 0; i < inventory.size(); i++){
         if(inventory[i] == input){
-            for(int j = 0; j < items.size(); j++){
+            for(uint j = 0; j < items.size(); j++){
                 if(items[j] -> name == input){
                     if(items[j] -> turnonAble == false){
                         cout<<"Item is not able to be turned on." << endl;
@@ -365,7 +365,7 @@ void open(string input){
         cout << "There is no such thing here to open." << endl;
         return;
     }
-    for(int i = 0; i < containers.size(); i++){
+    for(uint i = 0; i < containers.size(); i++){
         if(containers[i] -> name == input){
             //Then I can open
             if(containers[i] -> status == "locked"){
@@ -379,7 +379,7 @@ void open(string input){
             containers[i] -> status = "unlocked";
             //Display message
             cout << containers[i] -> name << " contains ";
-            int j;
+            uint j;
             for(j = 0; j < (containers[i] -> item).size() - 1; j++){
                 cout << containers[i] -> item[j] << ", ";
             }
@@ -399,7 +399,7 @@ void exit(){
 
 void attack(string monster, string weapon){
     //first, check if we have the monster in this room
-    int i,j;
+    uint i,j;
     for(i = 0; i < current -> creature.size(); i++){
         if(current -> creature[i] == monster){ break; }
     }
@@ -633,7 +633,7 @@ void checkInput(string input){
 
 /***********************For my triggers***************************/
 string istypeof(string o){
-    int i;
+    uint i;
     for(i = 0; i < rooms.size(); i++){
         if(rooms[i] -> name == o){
             return "Room";
@@ -666,7 +666,7 @@ bool ownerTrigger(Trigger * t){//3 conditions
         //if owner + object == true && has == yes,
         // or owner + object == false && has == no, trigger activated
             //print and actions(plural), return true
-    int i,j,k;
+    uint i,j,k;
     if(owner == "inventory"){
         for(i = 0; i < inventory.size(); i++){
             if(inventory[i] == object){
@@ -819,7 +819,7 @@ bool statusTrigger(Trigger * t){//2 conditions
     string status = t -> status.status;
         //if it matches the status
         //print and actions(plural), return true
-    int i,j;
+    uint i,j;
     string object_type = istypeof(object);
     if(object_type == "Room"){
         for(i = 0; i < rooms.size(); i++){
@@ -889,7 +889,7 @@ bool checkTrigger_nocommand(){
     //else if it is single, check if it has not been executed before
     //if it is 3-cond, go to ownerTrigger()
     //else if it is 2-cond, go to statusTrigger()
-    int i,j,k;
+    uint i,j,k;
     bool rresult = false;
     bool iresult = false;
     bool cresult = false;
@@ -971,7 +971,7 @@ bool checkTrigger_withcommand(string input){
     //else if it is single, check if it has been executed before
     //if it is 3-cond, go to ownerTrigger()
     //else if it is 2-cond, go to statusTrigger()
-    int i,j,k;
+    uint i,j,k;
     bool rresult = false;
     bool iresult = false;
     bool cresult = false;
