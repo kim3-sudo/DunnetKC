@@ -256,6 +256,7 @@
     <status>off</status>
     <accept>cpu</accept>
     <trigger>
+      <type>permanent</type>
       <condition>
         <has>yes</has>
         <object>cpu</object>
