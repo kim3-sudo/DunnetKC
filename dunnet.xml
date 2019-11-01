@@ -209,7 +209,7 @@
       <action>Delete bakedStudent</action>
     </attack>
     <trigger>
-      <type>permanent</type>
+      <type>single</type>
       <condition>
         <object>flashlight</object>
         <status>on</status>
