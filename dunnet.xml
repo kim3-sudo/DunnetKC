@@ -204,7 +204,7 @@
         <object>flashlight</object>
         <status>on</status>
       </condition>
-      <print>You shine the flashlight in their face. They get scared and scuttle away.</print>
+      <print>You shine the flashlight in their face. They get scared and scuttle away. They dropped something...looks like a key to me.</print>
       <action>Add key to OldKenyon</action>
       <action>Delete bakedStudent</action>
     </attack>
@@ -214,7 +214,7 @@
         <object>flashlight</object>
         <status>on</status>
       </condition>
-      <print>They dropped something...looks like a key to me.</print>
+      <print>You could shine the flashlight in their face. Remember, you can use "help" to get syntax. You can only go north.</print>
     </trigger>
   </creature>
   <room>
