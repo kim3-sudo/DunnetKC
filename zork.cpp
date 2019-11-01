@@ -1,22 +1,22 @@
 #include "header.h"
 using namespace std;
 using namespace rapidxml;
-
+//testfile git stage commit test thing i hate everything right now
 int main(int argc, char *argv[]){
-    
+
     //xml_document<> doc;    // character type defaults to char
     rapidxml::file<> xmlFile("zork.xml");
     rapidxml::xml_document<> doc;
     doc.parse<0>(xmlFile.data());    // 0 means default parse flags
-    
+
     xml_node<> *node = doc.first_node(); //map node (root)
-    
+
     //Setup xml lists
     vector<xml_node<>*> roomx;
     vector<xml_node<>*> containerx;
     vector<xml_node<>*> itemx;
     vector<xml_node<>*> creaturex;
-    
+
     for(xml_node<>*top = node -> first_node(); top; top = top -> next_sibling()){
       if(string(top->name()) == string("room")){
         roomx.push_back(top);
@@ -31,7 +31,7 @@ int main(int argc, char *argv[]){
         creaturex.push_back(top);
       }
     }
-    
+
     //Setup Zork list
     //Add rooms to map
     Room *room;
@@ -83,11 +83,11 @@ int main(int argc, char *argv[]){
         getline(cin, input);
         //Quit Command
         if(string(input) == string("q")){break;}
-        
+
         overridden = checkTrigger_withcommand(input);
         if(END){break;}
         if(overridden){continue;}
-        
+
         checkInput(input);
         if(END){break;}
     }
