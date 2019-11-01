@@ -12,7 +12,6 @@
         <has>no</has>
         <object>flashlight</object>
         <owner>inventory</owner>
-        <status>off</status>
       </condition>
       <print>*stumble* need some light...</print>
     </trigger>
@@ -23,7 +22,6 @@
         <has>no</has>
         <object>flashlight</object>
         <owner>inventory</owner>
-        <status>off</status>
       </condition>
       <print>*stumble* need some light...</print>
     </trigger>
@@ -34,7 +32,6 @@
         <has>no</has>
         <object>flashlight</object>
         <owner>inventory</owner>
-        <status>off</status>
       </condition>
       <print>*stumble* need some light...</print>
     </trigger>
@@ -45,7 +42,6 @@
         <has>no</has>
         <object>flashlight</object>
         <owner>inventory</owner>
-        <status>off</status>
       </condition>
       <print>*stumble* need some light...</print>
     </trigger>
