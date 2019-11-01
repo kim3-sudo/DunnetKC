@@ -186,6 +186,7 @@
   <room>
     <name>OldKenyon</name>
     <creature>bakedstudent</creature>
+    <item>key</item>
     <description>As the fog clears, you see the outline of a grand building. The ground rumbles as an Old Kenyon house party goes down. There's a student who's stoned out of their mind (bakedstudent). You could shine the flashlight in their face. (type "help" for syntax) You can only go north.</description>
     <border>
       <direction>south</direction>
