@@ -239,25 +239,36 @@
   </room>
   <item>
     <name>mainframe</name>
+    <writing>user admin, pass dcat</writing>
     <status>off</status>
+    <condition>
+      <has>yes</has>
+      <object>cpu</object>
+      <owner>mainframe</owner>
+    </condition>
+    <turnon>
+      <print>The mainframe springs to life, the lights start flashing in a seemingly organized fashion, and the fans start up.</print>
+      <action>Update mainframe to on</action>
+    </turnon>
   </item>
-  <room>
-    <name>mdf</name>
-    <description>You push a mysterious door, and inside, there's an old and dusty IBM z/370 mainframe computer (a "mainframe"). All of the lights are dark, and the fans appear to be still. You can only go west from here.</description>
-    <item>
-      <name>mainframe</name>
-      <writing>user admin, pass dcat</writing>
-      <status>off</status>
+  <container>
+    <name>mainframe</name>
+    <status>off</status>
+    <accept>cpu</accept>
+    <trigger>
       <condition>
         <has>yes</has>
         <object>cpu</object>
         <owner>mainframe</owner>
       </condition>
-      <turnon>
-        <print>The mainframe springs to life, the lights start flashing in a seemingly organized fashion, and the fans start up.</print>
-        <action>Update mainframe to on</action>
-      </turnon>
-    </item>
+      <print>The mainframe springs to life, the lights start flashing in a seemingly organized fashion, and the fans start up.</print>
+      <action>Update mainframe to on</action>
+    </trigger>
+  </container>
+  <room>
+    <name>mdf</name>
+    <description>You push a mysterious door, and inside, there's an old and dusty IBM z/370 mainframe computer (a "mainframe"). All of the lights are dark, and the fans appear to be still. You can only go west from here.</description>
+    <item>mainframe</item>
     <border>
       <direction>west</direction>
       <name>PeirceEntrance</name>
