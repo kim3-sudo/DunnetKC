@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map>
-  <item>
-    <name>flashlight</name>
-    <status>off</status>
-  </item>
   <room>
     <name>Bexley</name>
     <description>Type 'help' to view the help commands. FLASH! A blinding light fills your entire field of vision. For a few seconds, everything goes dark. As you start to come to, you realize that this place looks familiar! You find yourself at the edge of the Kenyon College campus, right outside of Bexley Hall. There's only a crecent moon tonight, so you don't see much. You see a flashlight lying on the ground. You can only go south.</description>
@@ -31,15 +27,6 @@
       </condition>
       <print>*stumble* need some light...</print>
     </trigger>
-    <item>
-      <name>flashlight</name>
-      <writing>next to a small button it reads "push for full brightness"</writing>
-      <status>on</status>
-      <turnon>
-        <print>The flashlight seems kind of dim, but it'll do.</print>
-        <action>Update flashlight to on</action>
-      </turnon>
-    </item>
     <trigger>
       <type>permanent</type>
       <command>s</command>
