@@ -261,14 +261,14 @@
         <object>cpu</object>
         <owner>mainframe</owner>
       </condition>
-      <print>The mainframe springs to life, the lights start flashing in a seemingly organized fashion, and the fans start up.</print>
+      <print>The mainframe springs to life, the lights start flashing in a seemingly organized fashion, and the fans start up. Next to you, a dot matrix printer connected at 600 baud starts to spit out paper. "User took flashlight. User went south. User took my CPU. User took some rum..." The floor starts to shake, and everything goes white...END OF GAME</print>
       <action>Update mainframe to on</action>
     </trigger>
   </container>
   <room>
     <name>mdf</name>
     <description>You push a mysterious door, and inside, there's an old and dusty IBM z/370 mainframe computer (a "mainframe"). All of the lights are dark, and the fans appear to be still. You can only go west from here.</description>
-    <item>mainframe</item>
+    <container>mainframe</container>
     <border>
       <direction>west</direction>
       <name>PeirceEntrance</name>
