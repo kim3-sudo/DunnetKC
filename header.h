@@ -655,7 +655,7 @@ string istypeof(string o){
             return "Creature";
         }
     }
-    return NULL;
+    return "Room";
 }
 bool ownerTrigger(Trigger * t){//3 conditions
     //check owner, go to it(inventory/room/container...)
