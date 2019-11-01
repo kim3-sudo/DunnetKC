@@ -619,6 +619,7 @@ void checkInput(string input){
 		cout << "w - go west" << endl;
 		cout << "take <object> - take the object, CaSe SeNsItIvE!" << endl;
 		cout << "drop <object> - drop the object, CaSe SeNsItIvE!" << endl;
+		cout << "shine <directobject> with flashlight - shine the flashlight at the direct object, CaSe SeNsItIvE!" << endl;
 		cout << "i - show inventory" << endl;
 		cout << "canihazip - display your IPv4 address (in the game)" << endl;
 		cout << "q - quit and exit game" << endl;
