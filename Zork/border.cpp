@@ -17,3 +17,4 @@ Border::Border(XMLNode aNode) {
   } while (!bNode.isEmpty());
 }
 
+//here's another useless comment for the contributor guidelines.

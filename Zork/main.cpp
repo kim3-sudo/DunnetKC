@@ -6,7 +6,7 @@
 #include "room.h"
 #include "world.h"
 
-
+//adding some changes to write the docs for contributor guidelines.
 using namespace std;
 
 string bookFile = "game.xml";
