@@ -1,4 +1,7 @@
 # DunnetKC
+
+#### This repo probably won't receive any updates in the near future, and it's only about 70% complete. At some point, I might decide to crack it back open, just for fun...
+
 ## About the repo
 Source code and makefile for the Dunnet game. Adapted for Kenyon College's campus, this version starts at the outside of Bexley Hall, and moves its way east to Eaton Center, then south down Middle Path to Peirce Hall, where there is (if everything works out), an IBM mainframe that the user will have to put things into and get information out of.
 
